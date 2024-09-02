@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Button } from "antd";
 
 function App() {
 
 
   return (
-    <>
-      <h1>test</h1>
-    </>
+    <div className="p-5 flex flex-col gap-5">
+      <h1 className=''>test</h1>
+      <Button type="primary">Primary Button</Button>
+      <Button>Default Button</Button>
+    </div>
   )
 }
 
