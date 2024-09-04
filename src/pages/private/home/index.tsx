@@ -14,7 +14,6 @@ function Homepage() {
       setLoading(true);
       const response = await axios.get("/api/campaigns/get-all");
       setCampaigns(response.data);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       message.error(error.message);
     } finally {
@@ -28,7 +27,7 @@ function Homepage() {
 
   return (
     <div>
-      <PageTitle title="Campaigns..." />
+      <PageTitle title="Campaigns" />
       {loading && (
         <div className="flex justify-center items-center h-96">
           <Spin />

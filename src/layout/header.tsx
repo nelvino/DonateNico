@@ -56,7 +56,6 @@ function Header() {
     },
   ];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const menuItemsToUse: any[] = currentUser?.isAdmin
     ? adminMenuItems
     : userMenuItems;
@@ -66,7 +65,7 @@ function Header() {
         className="text-2xl font-bold text-white cursor-pointer"
         onClick={() => navigate("/")}
       >
-        Donate-Nico
+        DONATE NICO
       </h1>
 
       <Dropdown menu={{ items: menuItemsToUse }} placement="bottom">
