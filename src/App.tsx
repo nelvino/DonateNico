@@ -13,7 +13,6 @@ import Homepage from "./pages/private/home";
 import DonationsPage from "./pages/private/user/donations";
 import ProfilePage from "./pages/private/user/profile";
 import ReportsPage from "./pages/private/user/reports";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import ThemeProvider from "./providers/theme-provider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -138,7 +137,6 @@ function App() {
             }
           />
         </Routes>
-        <SpeedInsights/>
       </BrowserRouter>
     </ThemeProvider>
   );
