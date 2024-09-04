@@ -56,6 +56,7 @@ function Header() {
     },
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const menuItemsToUse: any[] = currentUser?.isAdmin
     ? adminMenuItems
     : userMenuItems;

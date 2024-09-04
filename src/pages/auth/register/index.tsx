@@ -15,8 +15,9 @@ function RegisterPage() {
     try {
       setLoading(true);
       await axios.post("/api/users/register", values);
-      message.success("Register successful, please login to continue");
+      message.success("Register successfull , please login to continue");
       navigate("/login");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       message.error(error.response.data.message || error.message);
     } finally {

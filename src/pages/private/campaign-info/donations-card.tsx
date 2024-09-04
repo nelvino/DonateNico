@@ -13,7 +13,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./checkout-form";
 
 const stripePublicKey =
-  "pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ";
+  "pk_test_51PvDJIDkLEsWtJVZJvTLbkWZjcChI3pagFPuUDqbYNkPumcHTP8hT94vxJ9nhqDOqBEH0GF0HUljRWMUqU4nbGcZ00lbHLt7Kr";
 const stripePromise = loadStripe(stripePublicKey);
 
 console.log(stripePublicKey);

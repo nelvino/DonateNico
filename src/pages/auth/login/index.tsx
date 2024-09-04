@@ -1,5 +1,5 @@
 import { Button, Form, Input, message } from "antd";
-import WelcomeContent from "../common/welcome-content.tsx";
+import WelcomeContent from "../common/welcome-content";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -13,9 +13,10 @@ function LoginPage() {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/login", values);
-      message.success("Login successful");
+      message.success("Login successfull");
       Cookies.set("token", response.data.token);
       navigate("/");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       message.error(error?.response?.data?.message || error.message);
     } finally {

@@ -15,6 +15,7 @@ function CampaignsPage() {
     useState<CampaignTypeProps | null>(null);
   const [showCampaignDonations, setShowCampaignDonations] = useState(false);
   const [loading, setLoading] = useState(false);
+  
   const getData = async () => {
     try {
       setLoading(true);
