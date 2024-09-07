@@ -12,7 +12,7 @@ function UsersList() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/users/all-users");
+      const response = await axios.get("/api/users");
       setUsers(response.data.users);
     } catch (error: any) {
       message.error(error.message);

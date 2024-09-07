@@ -20,7 +20,7 @@ function AdminReportsPage() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `/api/reports/user-reports/${currentUser?._id}`
+        `/api/reports/user/${currentUser?._id}`
       );
       setReports(response.data);
     } catch (error: any) {

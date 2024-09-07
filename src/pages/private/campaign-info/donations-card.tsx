@@ -34,7 +34,7 @@ function DonationsCard({
   const getClientSecretToken = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("/api/payments/create-payment-intent", {
+      const response = await axios.post("/api/payments", {
         amount,
       });
       setClientSecretToken(response.data.clientSecret);

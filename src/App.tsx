@@ -66,7 +66,7 @@ function App() {
           />
 
           <Route
-            path="/admin/campaigns/create"
+            path="/admin/campaigns"
             element={
               <PrivateLayout>
                 <CampaignForm />
@@ -75,7 +75,7 @@ function App() {
           />
 
           <Route
-            path="/admin/campaigns/edit/:id"
+            path="/admin/campaigns/:id"
             element={
               <PrivateLayout>
                 <CampaignForm />

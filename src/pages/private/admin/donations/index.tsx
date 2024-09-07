@@ -12,7 +12,7 @@ function AdminDonationsPage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`/api/donations/get-all`);
+      const response = await axios.get(`/api/donations`);
       setDonations(response.data);
     } catch (error: any) {
       message.error(error.message);

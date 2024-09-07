@@ -19,7 +19,7 @@ function CampaignsPage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/campaigns/get-all");
+      const response = await axios.get("/api/campaigns");
       setCampaigns(response.data);
     } catch (error: any) {
       message.error(error.message);
@@ -31,7 +31,7 @@ function CampaignsPage() {
   const onDelete = async (id: string) => {
     try {
       setLoading(true);
-      await axios.delete(`/api/campaigns/delete/${id}`);
+      await axios.delete(`/api/campaigns/${id}`);
       message.success("Campaign deleted successfully");
       getData();
     } catch (error: any) {
@@ -108,7 +108,7 @@ function CampaignsPage() {
           <Button size="small" className="border-primary border">
             <Pencil
               size={13}
-              onClick={() => navigate(`/admin/campaigns/edit/${record._id}`)}
+              onClick={() => navigate(`/admin/campaigns/${record._id}`)}
             />
           </Button>
         </div>
@@ -122,7 +122,7 @@ function CampaignsPage() {
         <PageTitle title="Campaigns" />
         <Button
           type="primary"
-          onClick={() => navigate("/admin/campaigns/create")}
+          onClick={() => navigate("/admin/campaigns")}
         >
           Create Campaign
         </Button>

@@ -17,7 +17,7 @@ function CampaignInfoPage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`/api/campaigns/get/${params.id}`);
+      const response = await axios.get(`/api/campaigns/${params.id}`);
       setCampaignData(response.data);
     } catch (error: any) {
       message.error(error.message);

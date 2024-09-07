@@ -16,7 +16,7 @@ function PrivateLayout({ children }: { children: React.ReactNode }) {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/users/current-user");
+      const response = await axios.get("/api/users/me");
       setCurrentUser(response.data.user);
     } catch (error: any) {
       message.error(error.response.data.message || error.message);

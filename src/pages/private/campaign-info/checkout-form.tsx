@@ -50,7 +50,7 @@ function CheckoutForm({
         antdMessage.error(result.error.message);
       } else {
         antdMessage.success("Donation successful");
-        await axios.post("/api/donations/create", {
+        await axios.post("/api/donations", {
           user: currentUser?._id,
           campaign: campaignData._id,
           amount,

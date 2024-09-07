@@ -19,7 +19,7 @@ function AdminReportsPage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/reports/admin-reports");
+      const response = await axios.get("/api/reports/admin");
       setReports(response.data);
     } catch (error: any) {
       message.error(error.message);

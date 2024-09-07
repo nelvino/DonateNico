@@ -13,9 +13,7 @@ function DonationsPage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(
-        `/api/donations/get-donations-by-user/${currentUser?._id}`
-      );
+      const response = await axios.get(`/api/donations/${currentUser?._id}`);
       setDonations(response.data);
     } catch (error: any) {
       message.error(error.message);
@@ -32,7 +30,8 @@ function DonationsPage() {
     {
       title: "Campaign",
       dataIndex: "campaign",
-      render: (_text: string, record: DonationTypeProps) => record.campaign.name,
+      render: (_text: string, record: DonationTypeProps) =>
+        record.campaign.name,
     },
     {
       title: "Amount",

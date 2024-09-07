@@ -21,10 +21,10 @@ function CampaignForm() {
       );
       values.images = [...uploadedImages || [], ...newImages];
       if (!params.id) {
-        await axios.post("/api/campaigns/create", values);
+        await axios.post("/api/campaigns", values);
         message.success("Campaign created successfully");
       } else {
-        await axios.put(`/api/campaigns/update/${params.id}`, values);
+        await axios.put(`/api/campaigns/${params.id}`, values);
         message.success("Campaign updated successfully");
       }
 
@@ -38,7 +38,7 @@ function CampaignForm() {
 
   const getCampaignData = async () => {
     try {
-      const response = await axios.get(`/api/campaigns/get/${params.id}`);
+      const response = await axios.get(`/api/campaigns/${params.id}`);
       setCampaignData(response.data);
       setUploadedImages(response.data.images);
     } catch (error: any) {

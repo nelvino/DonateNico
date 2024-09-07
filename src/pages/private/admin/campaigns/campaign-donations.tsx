@@ -19,7 +19,7 @@ function CampaignDonations({
     try {
       setLoading(true);
       const response = await axios.get(
-        `/api/donations/get-donations-by-campaign/${selectedCampaign._id}`
+        `/api/donations/${selectedCampaign._id}`
       );
       setDonations(response.data);
     } catch (error: any) {

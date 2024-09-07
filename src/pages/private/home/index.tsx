@@ -12,7 +12,7 @@ function Homepage() {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/campaigns/get-all");
+      const response = await axios.get("/api/campaigns");
       setCampaigns(response.data);
     } catch (error: any) {
       message.error(error.message);
